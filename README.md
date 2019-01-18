@@ -30,7 +30,7 @@ Latest mongodb-org-tools and mongodb-org-shell linux packages installed (tested 
 2. Import xml templates to Zabbix server via browser
 Configuration -> Templates -> Import template
 3. Upload \*.py files to zabbix server, put it to external scrips folder (/usr/lib/zabbix/externalscrips for my server), and
-chown +x mongo\*.py
+chmod +x mongo\*.py
 4. Install on zabbix server required python modules via command line
 <pre><code>
 sudo pip install pymongo
