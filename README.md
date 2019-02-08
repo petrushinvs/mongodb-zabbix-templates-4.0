@@ -1,6 +1,6 @@
 # mongodb-zabbix-templates
 
-#Zabbix templates for mongodb monitoring
+## Zabbix templates for mongodb monitoring
 
 The main monitoring tasks for us:
 
@@ -17,7 +17,7 @@ Google it for more information.
 This package contains 3 templates for monitoring mongodb instances (Mongo-DB template), mongos instance (Mongos template) and replicaset health (Mongo-RS Health template).
 By customising your hosts configurations with this templates you can monitor lagre mongodb clusters. For us it monitors 12 mongodb servers in sharded 6 big replicasets, 4 instances of small metadata database, config database replicaset, 5 mongos routers and backup server.
 
-##How to install Mongo-DB template
+## How to install Mongo-DB template
 
 Mongo-DB template is used to collect the basic mongodb server opcounters and notify if the instance is gone.
 
@@ -52,7 +52,7 @@ For Mongo-DB zabbix graphs go to Monitoring -> Graphs, then select the host with
 
 Here is the sample of mongodb zabbix custom screen https://petrushin.org/mongo/mongod_sample.html
 
-##How to install Mongos template
+## How to install Mongos template
 
 Mongos template is used to collect the basic mongos server opcounters and notify if the instance is gone.
 
@@ -70,7 +70,7 @@ In case the mongos instance is running on dedicated hardware or VM you have to a
 
 In a few minutes it starts to collect data. See the Mongos Misc: 'Mongos data collector' in zabbix latest data for easy debug.
 
-##How to install Mongo-RS probe template
+## How to install Mongo-RS probe template
 
 Mongo-RS probe template is used to watch for replicasets. It watch at entire replicaset, then tries to insert a test record and notify if replicaset or one of replicaset members goes unreachable.
 Create new host in zabbix named like replicaset, for example my-rs0, then add Mongo-RS template to this host.
