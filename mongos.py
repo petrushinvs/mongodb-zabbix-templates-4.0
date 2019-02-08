@@ -29,6 +29,11 @@ for opt, arg in opts:
     elif opt == '-s':
         mpass = arg
 
+# faced a strange problem - zabbix server add a space character to parameter passed to script 
+# and spend a hour to catch the bug :(
+mongohost = mongohost.rstrip()
+zbhost = zbhost.rstrip()
+
 arg = "-u " + muser + " -p " + mpass + " -h " + mongohost + ":" + mongoport + " --authenticationDatabase=admin --rowcount 1 --noheaders"
 cmd = ['mongostat', "-u", muser, "-p", mpass, "-h", mongohost + ":" + mongoport, "--authenticationDatabase=admin", "--rowcount", "1", "--noheaders"]
 r = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
