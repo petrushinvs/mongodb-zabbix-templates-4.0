@@ -16,9 +16,6 @@ import time
 ZBHOST = 'localhost'
 ZBPORT = 10051
 
-#zbhost = 'rs-raw0'
-
-
 try:
   opts, args = getopt.getopt(sys.argv[1:],"c:n:r:u:s:")
 except getopt.GetoptError:
@@ -36,11 +33,6 @@ for opt, arg in opts:
     muser = arg
   elif opt == '-s':
     mpass = arg
-
-#mongostr = 'h201.local.sunwind.su:27020,h202.local.sunwind.su:27020'
-#replicaSet = 'rs-raw0'
-#muser = 'sa'
-#mpass = 'qwe123$'
 
 inserted = 0
 connected = 0
