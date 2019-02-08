@@ -88,7 +88,7 @@ See 'RS data collector' in Mongo Replica Set section in zabbix latest data for d
 
 ## How to monitor more than one mongodb instance
 
-The easiest way to monitor more than one mongodb instance is to create new host in zabbix then add a MongoDB template with different {$MONGODB_PORT}
+The easiest way to monitor more than one mongodb instance is to create new host in zabbix then add a MongoDB template with {$MONGODB_PORT}
 
 ## Contacts
 
