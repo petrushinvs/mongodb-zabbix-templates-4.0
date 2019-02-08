@@ -54,7 +54,7 @@ Here is the sample of mongodb zabbix custom screen https://petrushin.org/mongo/m
 
 ## How to install Mongos template
 
-Mongos template is used to collect the basic mongos server opcounters and notify if the instance is gone.
+Mongos template is used for collecting the basic mongos server opcounters and notify if the instance is gone.
 
 In case you run mongos instance on the same hardware with any mongodb instance and have the same hostname, user and pass Mongos template will use the Macros data from previously configured Mongo-DB template. You have to do only two steps to get Mongos template running.
 1. Navigate to hosts configuration in zabbix server and add Mongos template to host with mongos instance.
@@ -72,7 +72,7 @@ In a few minutes it starts to collect data. See the Mongos Misc: 'Mongos data co
 
 ## How to install Mongo-RS probe template
 
-Mongo-RS probe template is used to watch for replicasets. It watch at entire replicaset, then tries to insert a test record and notify if replicaset or one of replicaset members goes unreachable.
+Mongo-RS probe template is used for watch for replicasets. It watch at entire replicaset, then tries to insert a test record and notify if replicaset or one of replicaset members goes unreachable.
 Create new host in zabbix named like replicaset, for example my-rs0, then add Mongo-RS template to this host.
 In Macros tab add the Macroses
 
