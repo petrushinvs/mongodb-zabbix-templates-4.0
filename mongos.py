@@ -134,7 +134,7 @@ print(ts, insert, update, delete, query, getmore, command)
 
 # Get serverStatus stats
 try:
-    mo = MongoClient('mongodb://' + muser + ':' + urlib.quote(mpass) + '@' + mongohost + ':' + mongoport + '/admin', connectTimeoutMS=5000)
+    mo = MongoClient('mongodb://' + muser + ':' + urllib.quote(mpass) + '@' + mongohost + ':' + mongoport + '/admin', connectTimeoutMS=5000)
 except Exception as e:
     print ('Can\'t connect to '+mongohost) 
     print ("ERROR:", e)
