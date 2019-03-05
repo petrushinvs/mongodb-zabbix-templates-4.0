@@ -7,6 +7,7 @@ from pymongo import MongoClient
 import time
 import subprocess
 import re
+import urllib
 
 ZBSERVER = 'localhost'
 ZBPORT = 10051
@@ -139,7 +140,7 @@ print(ts, insert, update, delete, query, getmore, command)
 
 # Get serverStatus stats
 try:
-    mo = MongoClient('mongodb://' + muser + ':' + mpass + '@' + mongohost + ':' + mongoport + '/admin', connectTimeoutMS=5000)
+    mo = MongoClient('mongodb://' + muser + ':' + urllib.quote(mpass) + '@' + mongohost + ':' + mongoport + '/admin', connectTimeoutMS=5000)
 except Exception as e:
     print ('Can\'t connect to '+mongohost) 
     print ("ERROR:", e)
