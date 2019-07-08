@@ -22,7 +22,7 @@ for opt, arg in opts:
     if opt == '-h':
         mongohost = arg
     elif opt == '-n':
-        zbhost = arg
+        zbhost = arg.strip()
     elif opt == '-p':
         mongoport = arg
     elif opt == '-u':
